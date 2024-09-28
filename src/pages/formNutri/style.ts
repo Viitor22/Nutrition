@@ -22,7 +22,7 @@ section {
     border-top: 6px solid #4b8f29;
 
     @media (max-width: ${breakpoints.tablet}){
-      width: 400px;
+      width: 375px;
     }
   }
   

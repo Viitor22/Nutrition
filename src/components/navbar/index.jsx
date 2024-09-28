@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 import logo from '../../assets/plano.png'
+import MenuHamburger from "../menuHamburger/index.jsx"
 import {NavBarContainer} from './style.js'
 
 const NavBar = () => {
@@ -18,6 +19,7 @@ const NavBar = () => {
 
     return (
         <>
+        <MenuHamburger></MenuHamburger>
         <NavBarContainer>
             <div>
                 <img src={logo} alt="Nutrition Logo" /> Nutrition

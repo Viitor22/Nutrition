@@ -8,8 +8,7 @@ export const NavBarContainer = styled.div`
     align-items: center;
 
     @media (max-width: ${breakpoints.tablet}){
-        width: 100vw;
-        padding: 32px 96px;
+        display: none;
     }
 
     .content{

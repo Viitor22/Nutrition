@@ -54,7 +54,7 @@ export const TituloHero = styled.div`
     @media (max-width: ${breakpoints.tablet}){
         left: 3.5%;
         width: 300px;
-        top: 200px;
+        top: 300px;
     }
 `
 
