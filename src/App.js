@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import NavBar from './components/navbar'
 import AllRoutes from './route'
-import GlobalCss from './style.ts'
+import GlobalCss from './style.js'
 
 function App() {
   return (

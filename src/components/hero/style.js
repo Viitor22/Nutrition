@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 import hero from '../../assets/people-5326159.jpg'
+import {breakpoints} from '../../style.js'
 
 export const HeroContainer = styled.div`
     height: 100vh; 
     background-size: cover;
 
-        @media (max-width: 767px){
+        @media (max-width: ${breakpoints.tablet}){
         max-width: auto;
         height: auto; 
 
@@ -18,6 +19,8 @@ export const HeroContainer = styled.div`
 `
 export const Hero = styled.div`
     position: relative;
+    top: 0;
+    lefto 0;
     padding: 24px 48px;
     padding-bottom: 12px;
     height: 100%;
@@ -26,14 +29,19 @@ export const Hero = styled.div`
     background-image: url(${hero});
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+    @media (max-width: ${breakpoints.tablet}){
+        height: 100vh; 
+        background-size: cover;
+    }
 `
 
 export const TituloHero = styled.div`
     position: absolute;
     z-index: 1;
-    margin-top: -40%;
+    top: 300px;
     width: 400px;
-    margin-left: 10%;
+    left: 10%;
     background-color: #4b8f29;
     padding: 24px;
     border-radius: 12px;
@@ -41,6 +49,12 @@ export const TituloHero = styled.div`
 
     p{
         margin-top: 12px;
+    }
+
+    @media (max-width: ${breakpoints.tablet}){
+        left: 3.5%;
+        width: 300px;
+        top: 200px;
     }
 `
 
@@ -63,4 +77,3 @@ export const ButtonHero = styled.a`
         color: #000;
     }    
 `
-

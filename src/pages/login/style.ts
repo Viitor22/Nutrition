@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from '../../assets/imagem.jpg'
+import { breakpoints } from "../../style";
 
 export const LoginContainer = styled.div`
 display: flex;
@@ -10,6 +11,10 @@ background-image: url(${background});
 background-size: cover;
 background-position: center;
 
+@media (max-width: ${breakpoints.tablet}){
+    display: block;
+}
+
 .container{
     width: 500px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -17,13 +22,17 @@ background-position: center;
     border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 40px;
     border-radius: 10px;
+
+    @media (max-width: ${breakpoints.tablet}){
+        width: 280px;
+        margin: 0 auto;
+    }
 }
 
 .container h1{
     text-align: center;
     font-size: 40px;
     color: white;
-
 }
 
 .container .input-field {

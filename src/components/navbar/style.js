@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { breakpoints } from "../../style";
 
 export const NavBarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 32px 96px;
     align-items: center;
+
+    @media (max-width: ${breakpoints.tablet}){
+        width: 100vw;
+        padding: 32px 96px;
+    }
 
     .content{
         display: flex;
@@ -49,6 +55,27 @@ export const NavBarContainer = styled.div`
     
     img {
         width: 30px;
+    }
+
+    .content{
+        display: flex;
+
+        .links{
+            display: flex;
+        }
+
+        .hover{
+        display: flex;
+        padding: 0px 20px;
+        align-items: center;
+        position: relative;
+            &:hover{
+                .dropdown-content{
+                    display: block;
+                    z-index: 2;
+                }
+            }
+        }
     }
 `
 

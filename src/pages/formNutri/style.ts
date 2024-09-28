@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import { breakpoints } from "../../style";
 
 export const Section = styled.section`
 section {
     background-color: #c8e0b6;
     padding: 20px;
+
+    @media (max-width: ${breakpoints.tablet}){
+      display: flex; 
+      jjustify-content: center;
+    }
   }
   
   form {
@@ -14,6 +20,10 @@ section {
     max-width: 800px;
     margin: 0 auto;
     border-top: 6px solid #4b8f29;
+
+    @media (max-width: ${breakpoints.tablet}){
+      width: 400px;
+    }
   }
   
   h2 {
@@ -54,6 +64,10 @@ section {
   input[type="radio"],
   input[type="checkbox"] {
     margin-right: 5px;
+
+    @media (max-width: ${breakpoints.tablet}){
+      margin-left: 20px;
+    }
   }
   
   button {
