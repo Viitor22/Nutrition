@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Nutrition & Health Color Palette */
+    --background: 35 25% 97%;
+    --foreground: 140 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 25% 15%;
+
+    /* Fresh green for health & vitality */
+    --primary: 145 65% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft beige for warmth */
+    --secondary: 35 35% 88%;
+    --secondary-foreground: 140 25% 15%;
+
+    /* Muted green-gray */
+    --muted: 140 15% 92%;
+    --muted-foreground: 140 15% 40%;
+
+    /* Light mint accent */
+    --accent: 160 45% 85%;
+    --accent-foreground: 140 30% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 145 65% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom nutrition tokens */
+    --green-light: 155 55% 88%;
+    --green-medium: 145 65% 45%;
+    --green-dark: 140 60% 30%;
+    --beige-light: 35 35% 92%;
+    --beige-medium: 35 35% 88%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(145, 65%, 45%), hsl(160, 55%, 50%));
+    --gradient-soft: linear-gradient(180deg, hsl(35, 25%, 97%), hsl(160, 45%, 95%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(145 30% 45% / 0.1);
+    --shadow-card: 0 2px 8px -2px hsl(140 20% 40% / 0.08);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 140 30% 8%;
+    --foreground: 35 25% 95%;
+
+    --card: 140 25% 12%;
+    --card-foreground: 35 25% 95%;
+
+    --popover: 140 25% 12%;
+    --popover-foreground: 35 25% 95%;
+
+    --primary: 145 60% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 20% 18%;
+    --secondary-foreground: 35 25% 95%;
+
+    --muted: 140 20% 18%;
+    --muted-foreground: 140 15% 65%;
+
+    --accent: 160 40% 25%;
+    --accent-foreground: 35 25% 95%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 20%;
+    --input: 140 20% 20%;
+    --ring: 145 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
